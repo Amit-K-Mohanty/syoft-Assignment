@@ -1,0 +1,90 @@
+<div class="sign-up-page">
+    <div class="p-3">
+        <div class="d-flex sign-up">
+            <img src="assets/5172658.jpg" class="back-image" alt="">
+            <div class="sign-up-form-sec d-flex align-items-center justify-content-center pl-4 py-3 pr-4">
+                <div class="sign-up-form pl-3 pr-3 py-2" style="width: 90%;">
+                    <p class="sitefontextrabold fs-30 p-0 m-0 ">Sign Up</p>
+                    <p class="sitefontmedium fs-18">Already have an account? <span (click)="onSignIn()" class="fs-20 sitefontmedium" style="cursor: pointer;color: #3185fc;">sign in</span></p>
+                    <div class="form-field pt-2">
+                        <form [formGroup]="signUpForm" (ngSubmit)="onContinue()">
+                            <div class="users-first-name my-2 form-group line-height-1">
+                                <label for="user-name" class="fs-16">First Name*</label>
+                                <input type="text" class="form-control fs-18 sitefontmedium" autocomplete="off" id="user-name" [ngClass]="{ 'red-input-bdr':getValid('user_firstname')}" formControlName="user_firstname" >
+                                <div class="error-view fs-14 p-0 mt-1 ml-1">
+                                    <div *ngIf="getValid('user_firstname')" class="error-msg-txt">
+                                        <p class="sitefontnormal" *ngIf="signUpForm['controls']['user_firstname'].errors?.['required']">Please enter your First Name</p>
+                                        <p class="sitefontnormal" *ngIf="signUpForm['controls']['user_firstname'].errors?.['minlength']">Please enter at least 2 Characters</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="users-last-name mb-2 form-group">
+                                <input type="text" class="form-control fs-24 sitefontmedium" [ngClass]="{ 'red-input-bdr':getValid('user_lastname')}" formControlName="user_lastname" placeholder="Enter last name" >
+                                <div class="error-view" class="error-msg-txt fs-10 p-0">
+                                    <div *ngIf="getValid('user_lastname')">
+                                        <p class="ml-1 mt-1 sitefontnormal" *ngIf="signUpForm.controls['user_lastname'].errors?.['required']">Please enter your Last Name</p>
+                                    </div>
+                                </div>
+                            </div> -->
+                            <div class="users-email form-group line-height-1 mb-2">
+                                <label for="user-Email" class="fs-16">Email address*</label>
+                                <input type="text" class="form-control fs-18 sitefontmedium" id="user-Email"  autocomplete="off"  [ngClass]="{ 'red-input-bdr':getValid('user_email')}" formControlName="user_email" >
+                                <div class="error-view fs-14 p-0 mt-1 ml-1">
+                                    <div *ngIf="getValid('user_email')" class="error-msg-txt">
+                                        <p class="ml-1 mt-1 sitefontnormal" *ngIf="signUpForm.controls['user_email'].errors?.['required']">Please enter your Email</p>
+                                        <p class="sitefontnormal" *ngIf="signUpForm.controls['user_email'].errors?.['pattern']">Invalid Email id</p>
+                                    </div>
+                                </div>
+                            </div>
+             
+                            <div class="users-password form-group line-height-1 mb-2">
+                                <label for="user-password" class="fs-16">Password*</label>
+                                <input type="text" class="form-control fs-18 sitefontmedium" id="user-password"  autocomplete="off"  [ngClass]="{ 'red-input-bdr':getValid('user_password')}" formControlName="user_password">
+                                <div class="error-view fs-14 p-0 mt-1 ml-1">
+                                    <div *ngIf="getValid('user_password')" class="error-msg-txt">
+                                        <p class="sitefontnormal" *ngIf="signUpForm.controls['user_password'].errors?.['required']">Please enter Password</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="users-mobile form-group line-height-1 mb-2">
+                                <label for="user-mobile" class="fs-16">Mobile*</label>
+                                <input type="tel" class="form-control fs-18 sitefontmedium" id="user-mobile"  autocomplete="off"  [ngClass]="{ 'red-input-bdr':getValid('user_phone')}" (keypress)="onKeyPress($event,10)" numbersOnly formControlName="user_phone" min="1111111111" max="9999999999">
+                                <div class="error-view fs-14 p-0 mt-1 ml-1">
+                                    <div *ngIf="getValid('user_phone')" class="error-msg-txt">
+                                        <p class="sitefontnormal" *ngIf="signUpForm.controls['user_phone'].errors?.['required']">Please enter your Mobile number</p>
+                                        <p *ngIf="signUpForm.controls['user_phone'].errors?.['min'] || signUpForm.controls['user_phone'].errors?.['max']" class="ml-1 mt-1 sitefontnormal">Please enter a valid Mobile number</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="users-city mb-2 form-group">
+                                <input type="text" class="form-control fs-24 sitefontmedium" [ngClass]="{ 'red-input-bdr':getValid('user_password')}" formControlName="user_city" placeholder="Enter City">
+                                <div class="error-view" class="error-msg-txt fs-10 p-0">
+                                    <div *ngIf="getValid('user_city')">
+                                        <p class="ml-1 mt-1 sitefontnormal" *ngIf="signUpForm.controls['user_city'].errors?.['required']">Please City</p>
+                                        <p *ngIf="signUpForm.controls['user_city'].errors?.['min'] || signUpForm.controls['user_city'].errors?.['max']" class="ml-1 mt-1 sitefontnormal">Please enter a valid City</p>
+                                    </div>
+                                </div>
+                            </div> -->
+                            <!-- <div class="users-zipcode mb-2 form-group">
+                                <input type="tel" class="form-control fs-24 sitefontmedium" [ngClass]="{ 'red-input-bdr':getValid('user_zipcode')}" (keypress)="onKeyPress($event,6)" formControlName="user_zipcode" placeholder="Enter Zip code" min="100000" max="999999">
+                                <div class="error-view" class="error-msg-txt fs-10 p-0">
+                                    <div *ngIf="getValid('user_zipcode')">
+                                        <p class="ml-1 mt-1 sitefontnormal" *ngIf="signUpForm.controls['user_zipcode'].errors?.['required']">Please enter your ZipCode</p>
+                                        <p class="ml-1 mt-1 sitefontnormal" *ngIf="signUpForm.controls['user_zipcode'].errors?.['minlength']">Please enter a valid zip code</p>
+                                    </div>
+                                </div>
+                            </div> -->
+                            <div>
+                                <input type="checkbox" (click)="onClickPrivacyPolicy()">
+                                <span class=" pl-2 fs-16 sitefontnormal">I agree to the Terms of Services and Privacy Policy</span>
+                            </div>
+
+                            <button [disabled]="(signUpForm.invalid || !privacyPolicy)"  type="submit" class="sign-up-btn mt-4 btn btn-primary w-100">Create your free account</button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

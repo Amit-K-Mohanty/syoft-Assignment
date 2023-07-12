@@ -1,0 +1,234 @@
+// Margins
+:root {
+  --px-0: 0px;
+  --px-1: 1px;
+  --px-2: 2px;
+  --px-3: 3px;
+  --px-4: 4px;
+  --px-5: 5px;
+  --px-6: 6px;
+  --px-7: 7px;
+  --px-8: 8px;
+  --px-9: 9px;
+  --px-10: 10px;
+  --px-11: 11px;
+  --px-12: 12px;
+  --px-13: 13px;
+  --px-14: 14px;
+  --px-15: 15px;
+  --px-16: 16px;
+  --px-17: 17px;
+  --px-18: 18px;
+  --px-19: 19px;
+  --px-20: 20px;
+  --px-21: 21px;
+  --px-22: 22px;
+  --px-23: 23px;
+  --px-24: 24px;
+  --px-25: 25px;
+  --px-26: 26px;
+  --px-27: 27px;
+  --px-28: 28px;
+  --px-29: 29px;
+  --px-30: 30px;
+  --px-31: 31px;
+  --px-32: 32px;
+  --px-33: 33px;
+  --px-34: 34px;
+  --px-35: 35px;
+  --px-36: 36px;
+  --px-37: 37px;
+  --px-38: 38px;
+  --px-39: 39px;
+  --px-40: 40px;
+}
+
+.fs-8 {
+  font-size: var(--px-8) !important;
+}
+.fs-9 {
+  font-size: var(--px-9) !important;
+}
+.fs-10 {
+  font-size: var(--px-10) !important;
+}
+.fs-11 {
+  font-size: var(--px-11) !important;
+}
+.fs-12 {
+  font-size: var(--px-12) !important;
+}
+.fs-13 {
+  font-size: var(--px-13) !important;
+}
+.fs-14 {
+  font-size: var(--px-14) !important;
+}
+.fs-15 {
+  font-size: var(--px-15) !important;
+}
+.fs-16 {
+  font-size: var(--px-16) !important;
+}
+.fs-17 {
+  font-size: var(--px-17) !important;
+}
+.fs-18 {
+  font-size: var(--px-18) !important;
+}
+.fs-19 {
+  font-size: var(--px-19) !important;
+}
+.fs-20 {
+  font-size: var(--px-20) !important;
+}
+.fs-21 {
+  font-size: var(--px-21) !important;
+}
+
+.fs-22 {
+  font-size: var(--px-22) !important;
+}
+
+.fs-23 {
+  font-size: var(--px-23) !important;
+}
+
+.fs-24 {
+  font-size: var(--px-24) !important;
+}
+
+.fs-25 {
+  font-size: var(--px-25) !important;
+}
+
+.fs-26 {
+  font-size: var(--px-26) !important;
+}
+
+.fs-27 {
+  font-size: var(--px-26) !important;
+}
+
+.fs-28 {
+  font-size: var(--px-27) !important;
+}
+
+.fs-29 {
+  font-size: var(--px-28) !important;
+}
+
+.fs-30 {
+  font-size: var(--px-30) !important;
+}
+
+.fs-31 {
+  font-size: var(--px-31) !important;
+}
+.fs-32 {
+  font-size: var(--px-32) !important;
+}
+.fs-33 {
+  font-size: var(--px-33) !important;
+}
+.fs-34 {
+  font-size: var(--px-34) !important;
+}
+.fs-35 {
+  font-size: var(--px-35) !important;
+}
+.fs-36 {
+  font-size: var(--px-36) !important;
+}
+.fs-37 {
+  font-size: var(--px-37) !important;
+}
+.fs-38 {
+  font-size: var(--px-38) !important;
+}
+.fs-39 {
+  font-size: var(--px-39) !important;
+}
+.fs-40 {
+  font-size: var(--px-40) !important;
+}
+
+// font weight
+
+.fw-2 {
+  font-weight: 200 !important;
+}
+.fw-4 {
+  font-weight: 400 !important;
+}
+
+.fw-5 {
+  font-weight: 500 !important;
+}
+
+.fw-6 {
+  font-weight: 600 !important;
+}
+
+.fw-7 {
+  font-weight: 700 !important;
+}
+
+.fw-8 {
+  font-weight: 800 !important;
+}
+
+// opacity
+.op-1 {
+  opacity: 0.1;
+}
+.op-2 {
+  opacity: 0.2;
+}
+.op-3 {
+  opacity: 0.3;
+}
+.op-4 {
+  opacity: 0.4;
+}
+.op-5 {
+  opacity: 0.5;
+}
+.op-6 {
+  opacity: 0.6;
+}
+.op-7 {
+  opacity: 0.7;
+}
+.op-8 {
+  opacity: 0.8;
+}
+.op-9 {
+  opacity: 0.9;
+}
+
+
+.float-left {
+  float: left !important;
+}
+.float-right {
+  float: right !important;
+}
+.text-algin-r {
+  text-align: right !important;
+}
+.text-centre {
+  text-align: center;
+}
+.capitalize {
+  text-transform: capitalize;
+}
+.flex-centre {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.flex-justify-centre {
+  display: flex;
+  justify-content: center;
+}

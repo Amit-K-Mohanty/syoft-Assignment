@@ -1,0 +1,41 @@
+<div class="dashboard-page">
+    <img src="assets/6938839_3409297.jpg" class="back-image" alt="">
+    <div class="user-info">
+        <div class="w-100 d-flex justify-content-center align-items-center flex-column">
+            <img src="assets/user.svg" alt="" class="users-img">
+
+        </div>
+        <div class="px-4">
+            <p class="text-center sitefontbold fs-20">{{userInfo.user_firstname + " " + userInfo.user_lastname}}</p>
+            <div class="fields ">
+                <p class="sitefontbold fs-18"> First Name:</p>
+                <p class="sitefontmedium fs-18 pl-2">{{userInfo.user_firstname }}</p>
+            </div>
+            <div class="fields">
+                <p class="sitefontbold fs-18"> Last Name:</p>
+                <p class="sitefontmedium fs-18 pl-2">{{userInfo.user_lastname}}</p>
+            </div>
+            <div class="fields">
+                <p class="sitefontbold fs-18"> Email Id:</p>
+                <p  class="sitefontmedium fs-18 pl-2">{{userInfo.user_email}}</p>
+            </div>
+            <div class="fields">
+                <p class="sitefontbold fs-18"> Mobile number:</p>
+                <p class="sitefontmedium fs-18 pl-2">{{userInfo.user_phone}}</p>
+            </div>
+            <div class="fields">
+                <p class="sitefontbold fs-18"> City:</p>
+                <p class="sitefontmedium fs-18 pl-2">{{userInfo.user_city}}</p>
+            </div>
+            <div class="fields">
+                <p class="sitefontbold fs-18"> Zip Code:</p>
+                <p class="sitefontmedium fs-18 pl-2">{{userInfo.user_zipcode}}</p>
+            </div>
+
+            <div class="logout" style="cursor: pointer;" (click)="onLogout()">
+                <p class="sitefontbold fs-18">Log Out</p>
+            </div>
+        </div>
+
+    </div>
+</div>

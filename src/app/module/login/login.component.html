@@ -1,0 +1,66 @@
+<div class="login-page">
+    <div class="p-3">
+        <div class="d-flex login">
+            <img src="assets/5172658.jpg" class="back-image" alt="">
+            <div class="login-form-sec d-flex align-items-center justify-content-center pl-4 py-3 pr-4">
+                <div class="login-form pl-3 pr-3 py-2" style="width: 90%;">
+                    <p class="sitefontextrabold fs-30 p-0 m-0 ">Sign In</p>
+                    <p class="sitefontmedium fs-18">Don't have an account? <span class="fs-18" (click)="onSignUp()"
+                            class="fs-20 sitefontmedium" style="cursor: pointer;color: #3185fc;">sign up</span></p>
+                    <div class="form-field pt-2 mt-1">
+                        <div style="height:20px;" class="mb-3">
+                            <p *ngIf="invalidUserCred" style="color: red;" class="error-msg-txt fs-16  sitefontmedium"> Invalid UserId and Password</p>
+                            </div>
+                        <form [formGroup]="loginForm" (ngSubmit)="onContinue()">
+
+                            <div class="users-email form-group line-height-1 mb-2">
+                                <label for="user-Email" class="fs-16">Email address*</label>
+                                <input type="text" class="form-control fs-18 sitefontmedium" id="user-Email"
+                                    autocomplete="off" [ngClass]="{ 'red-input-bdr':getValid('user_email') ||invalidUserCred}"
+                                    formControlName="user_email" >
+                                <div class="error-view fs-14 p-0 mt-1 ml-1">
+                                    <div *ngIf="getValid('user_email')" class="error-msg-txt">
+                                        <p class="ml-1 mt-1 sitefontnormal"
+                                            *ngIf="loginForm.controls['user_email'].errors?.['required']">Please enter
+                                            your Email</p>
+                                        <p class="sitefontnormal"
+                                            *ngIf="loginForm.controls['user_email'].errors?.['pattern']">Invalid Email
+                                            id</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="users-password form-group line-height-1 mb-2">
+                                <label for="user-password" class="fs-16">Password*</label>
+                                <input type="text" class="form-control fs-18 sitefontmedium" id="user-password"
+                                    autocomplete="off" [ngClass]="{ 'red-input-bdr':getValid('user_password') || invalidUserCred}"
+                                    formControlName="user_password" >
+                                <div class="error-view fs-14 p-0 mt-1 ml-1">
+                                    <div *ngIf="getValid('user_password')" class="error-msg-txt">
+                                        <p class="sitefontnormal"
+                                            *ngIf="loginForm.controls['user_password'].errors?.['required']">Please
+                                            enter Password</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div>
+                                    <input type="checkbox" (click)="onClickRememberMe()">
+                                    <span class=" pl-2 fs-16 sitefontnormal">Remember me</span>
+                                </div>
+                                <div>
+                                    <p class="fs-16" style="cursor: pointer;color: #3185fc;">Forget Password</p>
+                                </div>
+                            </div>
+
+
+                            <button [disabled]="(loginForm.invalid)" type="submit"
+                                class="login-btn mt-4 btn btn-primary w-100">Sign in</button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
